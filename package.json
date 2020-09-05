@@ -1,0 +1,13 @@
+{
+  "name": "@kiwicom/cypress-example",
+  "version": "0.0.1",
+  "description": "Showcase of the basic setup of Cypress tests for Gitlab CI.",
+  "main": "index.js",
+  "repository": "git@gitlab.com:jaroslav-kubicek/cypress-example.git",
+  "author": "Jaroslav Kubicek <jaroslav.kubicek@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}
