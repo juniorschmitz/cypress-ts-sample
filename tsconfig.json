@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    // Target latest version of ECMAScript.
+    "target": "esnext",
+    // Search under node_modules for non-relative imports.
+    "moduleResolution": "node",
+    // Enable strictest settings like strictNullChecks & noImplicitAny.
+    "strict": true,
+    // Do not output any files
+    "noEmit": true
+  },
+  "include": [
+    "**/*.ts"
+  ]
+}
