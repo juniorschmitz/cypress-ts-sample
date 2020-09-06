@@ -7,6 +7,7 @@ Check the article [Cypress: Setting up the first acceptance tests in Gitlab CI 
 ## What's included?
 
 - Basic monorepo setup using yarn workspaces where Cypress tests are in separated package.
+- Cypress setup with Typescript support
 - Gitlab CI setup with dependency caching, eslint check and Cypress tests.
 - An example Cypress test that uses `@testing-library/cypress` library and `data-test` attributes as selectors.
 - Possible workaround when Cypress tests fail in Gitlab CI because of `/dev/shm` size   
