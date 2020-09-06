@@ -4,5 +4,11 @@
   "pluginsFile": "src/plugins",
   "supportFile": "src/support",
   "screenshotsFolder": "assets/screenshots",
-  "videosFolder": "assets/videos"
+  "videosFolder": "assets/videos",
+  "videoUploadOnPasses": false,
+  "chromeWebSecurity": false,
+  "retries": {
+    "runMode": 1,
+    "openMode": 0
+  }
 }
