@@ -8,6 +8,8 @@ image: $DOCKER_IMAGE
 stages:
   - dependencies
   - test
+  - deploy
+  - verify
 
 cache: &global_cache
   key:
@@ -35,3 +37,18 @@ lint:
   script:
     - yarn install --frozen-lockfile
     - yarn lint
+
+# =============== Verify
+cypress:
+  stage: verify
+  image: cypress/browsers:node12.18.0-chrome83-ff77
+  script:
+    - yarn --frozen-lockfile
+    # normally, we would test a staging app deployed in "deploy" stage
+    - export CYPRESS_BASE_URL="https://kiwi.com"
+    - yarn workspace cypress run -b chrome --headless
+  artifacts:
+    when: on_failure
+    expire_in: 3 days
+    paths:
+      - packages/cypress/assets
