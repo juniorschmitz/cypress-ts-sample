@@ -46,7 +46,7 @@ cypress:
     - yarn --frozen-lockfile
     # normally, we would test a staging app deployed in "deploy" stage
     - export CYPRESS_BASE_URL="https://kiwi.com"
-    - yarn workspace cypress run -b chrome --headless
+    - yarn workspace cypress cypress run -b chrome --headless
   artifacts:
     when: on_failure
     expire_in: 3 days
