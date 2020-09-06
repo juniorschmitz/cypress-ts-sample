@@ -1,0 +1,37 @@
+variables:
+  CYPRESS_CACHE_FOLDER: $CI_PROJECT_DIR/.cache/Cypress
+  CLICOLOR: '1' # Make sure everything is colorful
+  DOCKER_IMAGE: node:lts-alpine
+
+image: $DOCKER_IMAGE
+
+stages:
+  - dependencies
+  - test
+
+cache: &global_cache
+  key:
+    files:
+      - yarn.lock
+    prefix: $CI_PROJECT_PATH_SLUG
+  paths:
+    - .cache
+    - node_modules
+    - packages/*/node_modules
+  policy: pull
+
+# =============== Dependencies
+dependencies:
+  stage: dependencies
+  script:
+    - yarn install --frozen-lockfile
+  cache:
+    <<: *global_cache
+    policy: pull-push
+
+# =============== Test
+lint:
+  stage: test
+  script:
+    - yarn install --frozen-lockfile
+    - yarn lint
