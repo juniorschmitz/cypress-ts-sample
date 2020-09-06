@@ -13,4 +13,15 @@
 // the project's config changing)
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
-module.exports = (on: Cypress.PluginEvents, config: Cypress.PluginConfigOptions) => {};
+module.exports = (on: Cypress.PluginEvents, config: Cypress.PluginConfigOptions) => {
+  // If tests are failing in CI unexpectedly, it might be because of limited /dev/shm
+  // see: https://stackoverflow.com/questions/56218242/headless-chromium-on-docker-fails
+  // https://github.com/cypress-io/cypress/issues/350#issuecomment-574072211
+  on("before:browser:launch", (browser, launchOptions) => {
+    if (browser.family === "chromium") {
+      launchOptions.args.push("--disable-dev-shm-usage");
+    }
+
+    return launchOptions;
+  });
+};
