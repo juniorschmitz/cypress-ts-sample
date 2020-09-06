@@ -12,7 +12,6 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
-// eslint-disable-next-line @typescript-eslint/no-empty-function
 module.exports = (on: Cypress.PluginEvents, config: Cypress.PluginConfigOptions) => {
   // If tests are failing in CI unexpectedly, it might be because of limited /dev/shm
   // see: https://stackoverflow.com/questions/56218242/headless-chromium-on-docker-fails
