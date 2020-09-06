@@ -12,9 +12,5 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
-/**
- * @type {Cypress.PluginConfig}
- */
-module.exports = (on: Cypress.PluginEvents, config: Cypress.PluginConfigOptions) => {
-
-}
+// eslint-disable-next-line @typescript-eslint/no-empty-function
+module.exports = (on: Cypress.PluginEvents, config: Cypress.PluginConfigOptions) => {};
