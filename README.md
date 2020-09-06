@@ -18,3 +18,8 @@ Check the article [Cypress: Setting up the first acceptance tests in Gitlab CI 
 yarn install
 CYPRESS_BASE_URL="https://kiwi.com" yarn workspace cypress cypress open
 ```
+
+## Further resources
+
+- https://github.com/cypress-io/cypress-and-jest-typescript-example
+- https://gitlab.com/cypress-io/cypress-example-docker-gitlab
