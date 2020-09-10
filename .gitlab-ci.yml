@@ -41,8 +41,8 @@ lint:
 typescript:
   stage: test
   script:
-    - yarn install --frozen-lockfile
-    - yarn tsc --noEmit
+    - yarn workspace cypress tsc
+    - yarn workspace example-app tsc
 
 # =============== Verify
 cypress:
