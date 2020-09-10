@@ -38,6 +38,12 @@ lint:
     - yarn install --frozen-lockfile
     - yarn lint
 
+typescript:
+  stage: test
+  script:
+    - yarn install --frozen-lockfile
+    - yarn tsc --noEmit
+
 # =============== Verify
 cypress:
   stage: verify
