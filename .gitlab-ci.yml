@@ -11,6 +11,9 @@ stages:
   - deploy
   - verify
 
+default:
+  interruptible: true
+
 cache: &global_cache
   key:
     files:
