@@ -11,7 +11,7 @@ type Props = {
 
 const NavBar = ({ onMenuOpen }: Props) => {
   return (
-    <NavigationBar onMenuOpen={onMenuOpen} dataTest="Navbar">
+    <NavigationBar onMenuOpen={onMenuOpen} dataTest="NavBar">
       <Stack flex align="center" justify="between" spacing="none">
         <LinkList direction="row">
           <TextLink type="secondary">Travel</TextLink>

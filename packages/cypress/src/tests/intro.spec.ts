@@ -9,7 +9,7 @@ describe("Landing page", () => {
     cy.findByTestId("NavBar").should("be.visible");
 
     cy.log("🍔 menu can be opened");
-    cy.findByTestId("NavBar-SideNav-Open").click();
-    cy.findByTestId("NavBar-SideNav").should("be.visible");
+    cy.findByLabelText("Open navigation menu").click();
+    cy.findByTestId("SideNav").should("be.visible");
   });
 });
