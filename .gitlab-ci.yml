@@ -44,14 +44,26 @@ typescript:
     - yarn workspace cypress tsc
     - yarn workspace example-app tsc
 
+# =============== Deploy
+deploy-app:
+  stage: deploy
+  environment:
+    name: example-app/$CI_COMMIT_REF_SLUG
+    url: https://$CI_ENVIRONMENT_SLUG-kiwicom.surge.sh
+  script:
+    - yarn workspace example-app build
+    - yarn workspace example-app export
+    - yarn workspace example-app deploy
+
 # =============== Verify
 cypress:
   stage: verify
   image: cypress/browsers:node12.18.0-chrome83-ff77
+  environment:
+    name: example-app/$CI_COMMIT_REF_SLUG
   script:
     - yarn --frozen-lockfile
-    # normally, we would test a staging app deployed in "deploy" stage
-    - export CYPRESS_BASE_URL="https://kiwi.com"
+    - export CYPRESS_BASE_URL="https://$CI_ENVIRONMENT_SLUG-kiwicom.surge.sh"
     - yarn workspace cypress cypress run -b chrome --headless
   artifacts:
     when: on_failure
