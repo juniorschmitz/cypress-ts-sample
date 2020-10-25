@@ -1,11 +1,11 @@
 {
-  "name": "cypress",
+  "name": "cypress-tests",
   "version": "0.0.1",
   "license": "MIT",
   "private": true,
   "dependencies": {
     "@testing-library/cypress": "^7.0.0",
-    "cypress": "^5.1.0"
+    "cypress": "^5.4.0"
   },
   "devDependencies": {
     "@types/node": "^14.6.4",

@@ -16,7 +16,8 @@ Check the article [Cypress: Setting up the first acceptance tests in Gitlab CI 
 
 ```
 yarn install
-CYPRESS_BASE_URL="https://kiwi.com" yarn workspace cypress cypress open
+yarn app dev
+yarn c cypress open
 ```
 
 ## Further resources

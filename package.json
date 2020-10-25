@@ -11,7 +11,9 @@
     "packages/*"
   ],
   "scripts": {
-    "lint": "yarn eslint '*/**/*.{js,ts,tsx}' --quiet --report-unused-disable-directives"
+    "lint": "yarn eslint '*/**/*.{js,ts,tsx}' --quiet --report-unused-disable-directives",
+    "c": "yarn workspace cypress-tests",
+    "app": "yarn workspace example-app"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.1.0",

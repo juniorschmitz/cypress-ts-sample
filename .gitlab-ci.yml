@@ -41,8 +41,8 @@ lint:
 typescript:
   stage: test
   script:
-    - yarn workspace cypress tsc
-    - yarn workspace example-app tsc
+    - yarn c tsc
+    - yarn app tsc
 
 # =============== Deploy
 deploy-app:
@@ -51,9 +51,9 @@ deploy-app:
     name: example-app/$CI_COMMIT_REF_SLUG
     url: https://$CI_ENVIRONMENT_SLUG-kiwicom.surge.sh
   script:
-    - yarn workspace example-app build
-    - yarn workspace example-app export
-    - yarn workspace example-app deploy
+    - yarn app build
+    - yarn app export
+    - yarn app deploy
 
 # =============== Verify
 cypress:
@@ -64,7 +64,7 @@ cypress:
   script:
     - yarn --frozen-lockfile
     - export CYPRESS_BASE_URL="https://$CI_ENVIRONMENT_SLUG-kiwicom.surge.sh"
-    - yarn workspace cypress cypress run -b chrome --headless
+    - yarn c cypress run -b chrome --headless
   artifacts:
     when: on_failure
     expire_in: 3 days

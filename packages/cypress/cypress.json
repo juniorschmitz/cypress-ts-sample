@@ -7,6 +7,7 @@
   "videosFolder": "assets/videos",
   "videoUploadOnPasses": false,
   "chromeWebSecurity": false,
+  "baseUrl": "http://localhost:3000",
   "retries": {
     "runMode": 1,
     "openMode": 0
