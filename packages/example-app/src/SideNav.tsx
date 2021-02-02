@@ -19,7 +19,7 @@ const SideNav = ({ shown, onClose }: Props) => {
       shown={shown}
       onClose={onClose}
       actions={
-        <Stack direction="row" justify="between" spacing="condensed">
+        <Stack direction="row" justify="between" spacing="XSmall">
           <Button type="secondary" size="small">
             Manage my bookings
           </Button>

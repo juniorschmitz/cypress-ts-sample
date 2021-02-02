@@ -19,7 +19,7 @@ const NavBar = ({ onMenuOpen }: Props) => {
           <TextLink type="secondary">Rooms</TextLink>
           <TextLink type="secondary">Kiwi.com Stories</TextLink>
         </LinkList>
-        <Stack direction="row" spacing="tight" justify="end" shrink>
+        <Stack direction="row" spacing="XXSmall" justify="end" shrink>
           <ButtonLink type="secondary">Starred</ButtonLink>
           <ButtonLink type="secondary">Help</ButtonLink>
           <ButtonLink type="secondary">Account</ButtonLink>
