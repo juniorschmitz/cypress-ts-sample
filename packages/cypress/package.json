@@ -4,8 +4,8 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@testing-library/cypress": "^7.0.3",
-    "cypress": "^6.4.0"
+    "@testing-library/cypress": "^7.0.6",
+    "cypress": "^7.3.0"
   },
   "devDependencies": {
     "@types/node": "^15.3.0",
