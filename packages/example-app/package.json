@@ -10,18 +10,18 @@
     "deploy": "surge $PWD/dist/ $CI_ENVIRONMENT_SLUG-kiwicom.surge.sh"
   },
   "dependencies": {
-    "@kiwicom/orbit-components": "^0.108.2",
-    "next": "10.0.6",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
+    "@kiwicom/orbit-components": "^0.114.1",
+    "next": "10.2.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "styled-components": "^5.2.1"
   },
   "devDependencies": {
-    "@types/node": "^14.14.22",
+    "@types/node": "^15.3.0",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@types/styled-components": "^5.1.7",
-    "surge": "^0.21.7",
+    "surge": "^0.23.0",
     "typescript": "^4.1.3"
   }
 }
